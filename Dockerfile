@@ -1,6 +1,6 @@
 FROM golang:1.19.1-alpine3.16 as builder
 
-RUN go install github.com/mccutchen/go-httpbin/v2/cmd/go-httpbin@v2.4.0
+RUN go install github.com/mccutchen/go-httpbin/v2/cmd/go-httpbin@v2.4.1
 
 FROM gcr.io/distroless/base
 COPY --from=builder /go/bin/go-httpbin /bin/
