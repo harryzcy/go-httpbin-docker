@@ -1,4 +1,4 @@
-FROM golang:1.19.2-alpine3.16 as builder
+FROM golang:1.19.3-alpine3.16 as builder
 
 RUN CGO_ENABLED=0 go install github.com/mccutchen/go-httpbin/v2/cmd/go-httpbin@v2.4.1
 
